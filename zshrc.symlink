@@ -54,7 +54,7 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-extras sublime osx docker jira mvn pep8 pip pylint python fasd)
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.dotfiles/bin:/usr/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
