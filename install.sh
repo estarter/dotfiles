@@ -21,4 +21,10 @@ if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
     fi
 fi
 
+cp dotsyncrc ~/.dotsyncrc
+echo `hostname` git=ANY >> ~/.dotsyncrc
+echo "[endhosts]" >> ~/.dotsyncrc
+
+./dotsync/bin/dotsync  -I
+./dotsync/bin/dotsync  -L
 ln -s ~/.dotfiles/oh-my-zsh ~/.oh-my-zsh

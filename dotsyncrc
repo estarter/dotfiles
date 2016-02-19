@@ -1,0 +1,83 @@
+#
+# dotsync : https://github.com/dotphiles/dotsync
+#
+# Config for dotsync
+#
+# Authors:
+#   Ben O'Hara <bohara@gmail.com>
+#
+
+# Location of your dotfiles in $HOME
+# DOTFILES=.dotfiles
+
+# dotfiles to symlink
+#
+# srcfile:dstfile
+# dstfile will be '.$srcfile' by default (with path removed)
+#
+[files]
+dotsyncrc
+#ack/ackrc
+#aptitude
+#bin:bin
+#ctags/ctags
+#cmus
+#curl/curlrc
+#git/gitconfig
+#git/gitignore
+#git/gitattributes
+#git/tigrc
+#git/gitk
+#gnupg
+#grc
+#input/editrc
+#input/inputrc
+#irssi
+#mercurial/hgrc
+#mercurial/hgignore
+#mutt
+#mutt/muttrc
+#mutt/offlineimaprc
+#python/pythonrc
+#python/pylintrc
+#rpm/rpmmacros
+#ruby/irbrc
+#ruby/pryrc
+#ruby/gemrc
+#ruby/railsrc
+#ruby/rdebugrc
+#ruby/aprc
+#ruby/caprc
+#screen/screenrc
+#shell/hushlogin
+#shell/urlview
+#ssh
+#subversion
+#task/task
+#task/taskrc
+#tmux/tmux.conf
+#tmux/tmuxinator
+#vim/dotvim:.vim
+#vim/vimrc
+#vim/gvimrc
+#wget/wgetrc
+#zsh/fasdrc
+#zsh/dotzsh:.zsh
+#zsh/zlogin
+#zsh/zlogout
+#zsh/zprofile
+#zsh/zshenv
+#zsh/zshrc
+[endfiles]
+
+## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
+[hosts]
+#host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
+#host2.example.com               git=ANY                                                #git repo, pull from anywhere
+#host3.example.com               git=ANY                                                #git repo, pull from anywhere
+#host4.example.com               git=host5.example.com                                  #git repo, pull from host5
+#host5.example.com               git=NONE                                               #git repo, local only
+#host6.example.net               rsync=host1.example.com                                #rsync mirror, push from host1
+#host7.example.net               rsync=host2.example.com                                #rsync mirror, push from host2
+#host8.example.net               rsync=host2.example.com                                #rsync mirror, push from host2
+#host9.example.net               rsync=host2.example.com                                #rsync mirror, push from host2
