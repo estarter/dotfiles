@@ -134,4 +134,5 @@ install_dotfiles () {
   done
 }
 
+link_file "$DOTFILES_ROOT/oh-my-zsh" "$HOME/.oh-my-zsh"
 install_dotfiles
