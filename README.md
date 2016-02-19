@@ -1,5 +1,6 @@
 # dotfiles
-dotfiles collection 
+Your dotfiles are how you personalize your system. These are mine.
+
 
 # installation 
 
@@ -7,4 +8,4 @@ dotfiles collection
 
 
 # thanks to
-https://github.com/dotphiles/dotsync
+https://github.com/holman/dotfiles - for symlink idea
