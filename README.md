@@ -17,3 +17,8 @@ Your dotfiles are how you personalize your system. These are mine.
 
 ## thanks to
 https://github.com/holman/dotfiles - for original bootstrap script
+
+## todo
+add vim
+add bins?
+winccoa launchers. make it oh-my-zsh plugin, allow to select winccoa proj dynamically
