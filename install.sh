@@ -134,5 +134,8 @@ install_dotfiles () {
   done
 }
 
-link_file "$DOTFILES_ROOT/oh-my-zsh" "$HOME/.oh-my-zsh"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  link_file "$DOTFILES_ROOT/oh-my-zsh" "$HOME/.oh-my-zsh"
+fi
+link_file "$DOTFILES_ROOT/gitconfig.synlink" "$HOME/.gitconfig"
 install_dotfiles
