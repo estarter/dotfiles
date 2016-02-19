@@ -54,7 +54,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git git-extras sublime osx docker jira mvn pep8 pip pylint python)
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export EDITOR='mate -w'
 
 source $ZSH/oh-my-zsh.sh
 
