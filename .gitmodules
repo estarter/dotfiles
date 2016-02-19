@@ -1,0 +1,3 @@
+[submodule "dotsync"]
+	path = dotsync
+	url = https://github.com/dotphiles/dotsync.git
