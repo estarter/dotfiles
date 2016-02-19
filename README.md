@@ -1,7 +1,10 @@
 # dotfiles
 dotfiles collection 
 
-git clone --recursive https://github.com/estarter/dotfiles.git ~/.dotfiles
+# installation 
+
+    git clone --recursive https://github.com/estarter/dotfiles.git ~/.dotfiles
+    sh ~/.dotfiles/install.sh
 
 
 # thanks to
