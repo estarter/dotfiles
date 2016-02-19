@@ -53,16 +53,13 @@ link_file () {
   local overwrite= backup= skip=
   local action=
 
-  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
-  then
+  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
 
-    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
-    then
+    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
 
       local currentSrc="$(readlink $dst)"
 
-      if [ "$currentSrc" == "$src" ]
-      then
+      if [ "$currentSrc" == "$src" ]; then
 
         skip=true;
 
@@ -97,27 +94,24 @@ link_file () {
     backup=${backup:-$backup_all}
     skip=${skip:-$skip_all}
 
-    if [ "$overwrite" == "true" ]
-    then
+    if [ "$overwrite" == "true" ]; then
       rm -rf "$dst"
       success "removed $dst"
     fi
 
-    if [ "$backup" == "true" ]
-    then
+    if [ "$backup" == "true" ]; then
       mv "$dst" "${dst}.backup"
       success "moved $dst to ${dst}.backup"
     fi
 
-    if [ "$skip" == "true" ]
-    then
+    if [ "$skip" == "true" ]; then
       success "skipped $src"
     fi
   fi
 
-  if [ "$skip" != "true" ]  # "false" or empty
-  then
-    ln -s "$1" "$2"
+  if [ "$skip" != "true" ]; then  # "false" or empty
+    echo ln $1 $2
+    # ln -s "$1" "$2"
     success "linked $1 to $2"
   fi
 }
@@ -127,15 +121,16 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
-  do
+  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*'); do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
+
+  link_file "$DOTFILES_ROOT/gitconfig.synlink" "$HOME/.gitconfig"
+  link_file "$DOTFILES_ROOT/gitignore.synlink" "$HOME/.gitignore"
 }
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   link_file "$DOTFILES_ROOT/oh-my-zsh" "$HOME/.oh-my-zsh"
 fi
-link_file "$DOTFILES_ROOT/gitconfig.synlink" "$HOME/.gitconfig"
 install_dotfiles
