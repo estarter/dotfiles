@@ -130,7 +130,4 @@ install_dotfiles () {
   link_file "$DOTFILES_ROOT/gitignore.synlink" "$HOME/.gitignore"
 }
 
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  link_file "$DOTFILES_ROOT/oh-my-zsh" "$HOME/.oh-my-zsh"
-fi
 install_dotfiles
