@@ -21,7 +21,4 @@ if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
     fi
 fi
 
-cp -r oh-my-zsh ~/.oh-my-zsh
-rm -rf ~/.oh-my-zsh/.git
-cp -r .git/modules/oh-my-zsh ~/.oh-my-zsh/.git
-
+ln -s .dotfiles/oh-my-zsh .oh-my-zsh
