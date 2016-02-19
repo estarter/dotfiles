@@ -57,6 +57,7 @@ plugins=(git git-extras sublime osx docker jira mvn pep8 pip pylint python fasd)
 export PATH=$HOME/.dotfiles/bin:/usr/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
+WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
