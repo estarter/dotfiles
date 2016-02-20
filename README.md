@@ -1,5 +1,17 @@
 # dotfiles
-Your dotfiles are how you personalize your system. These are mine.
+
+Your dotfiles are how you personalize your system. These are mine. Fork it to make yours!
+
+What I want from dotfiles:
+
+1. lightweight and self-contained
+  * can be installed from zip without internet
+  * doesn't require 'extra' software like ruby deps
+2. sets zsh as default shell
+  * enables [fasd](https://github.com/clvv/fasd)
+  * brings oh-my-zsh as extra dependency
+3. works on linux and osx
+4. includes support for git, docker, maven, jira, python
 
 
 ## installation 
@@ -15,8 +27,10 @@ Your dotfiles are how you personalize your system. These are mine.
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `./install.sh`.
 
+
 ## thanks to
 https://github.com/holman/dotfiles - for original bootstrap script
+
 
 ## todo
 add vim
