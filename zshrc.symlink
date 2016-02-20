@@ -52,7 +52,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras sublime osx docker jira mvn autopep8 pep8 pip pylint python fasd)
+plugins=(git git-extras svn sublime osx docker jira mvn autopep8 pep8 pip pylint python fasd)
 
 export PATH=$HOME/.dotfiles/bin:/usr/local/bin:$PATH
 
