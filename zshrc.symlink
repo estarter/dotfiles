@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-alias mate=subl
+alias mate=st
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -66,5 +66,5 @@ WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>'
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='subl'
+  export EDITOR='st'
 fi
