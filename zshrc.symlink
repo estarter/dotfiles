@@ -68,3 +68,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='st'
 fi
+
+unsetopt share_history
+setopt no_share_history
+
