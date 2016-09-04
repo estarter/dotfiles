@@ -2,6 +2,8 @@
 export ZSH=$HOME/.oh-my-zsh
 
 alias mate=st
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=/opt/apache-maven-3.2.5/bin:$PATH
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
