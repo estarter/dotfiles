@@ -1,6 +1,8 @@
 [user]
-    name = estarter
-    email = estarter@gmail.com
+#    name = estarter
+#    email = estarter@gmail.com
+        name = Alexey Merezhin
+        email = amerezhin@e3ag.ch
 [alias]
     co = checkout
 [color]

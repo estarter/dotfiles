@@ -7,6 +7,8 @@ alias mate=st
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=/opt/apache-maven/bin:$PATH
 
+export PATH=/Users/estarter/src/e3/dlp/git-helper-scripts:$PATH
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
