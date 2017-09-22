@@ -104,3 +104,6 @@ fi
 unsetopt share_history
 setopt no_share_history
 
+if [ -f ~/.dotfiles/custom.sh ]; then
+  . ~/.dotfiles/custom.sh
+fi
