@@ -1,13 +1,39 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export GOPATH=/Users/estarter/go_workspace
 
-alias mate=st
+export EDITOR=vim
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=/opt/apache-maven/bin:$PATH
+alias tiga='tig --all'
 
-export PATH=/Users/estarter/src/e3/dlp/git-helper-scripts:$PATH
+function unzipt {
+  mkdir xxx
+  cd xxx
+  unzip ../$1
+}
+
+function pom_find {
+    if [ -z "$1" ]; then
+        echo "Usage: pom_find artifactId"
+        return 1
+    fi
+    xmlstarlet sel -N my=http://maven.apache.org/POM/4.0.0 -t -m my:project -i "my:artifactId='$1'" -v "my:artifactId" -o " " -v "my:version" -o " " -f -n `find ~/git -name pom.xml | grep -v target` | sed  "s/\/pom.xml//"
+}
+function pom_find_f {
+    res=$(pom_find $1 | awk '{print $NF}')
+    echo $res
+}
+function pom_cd {
+    res=$(pom_find $1 | awk '{print $3}')
+    echo $res
+    cd $res
+}
+
+
+# ctrl-W will remove a part of word
+autoload -U select-word-style
+select-word-style bash
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -58,7 +84,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras svn sublime osx docker jira mvn autopep8 pep8 pip pylint python fasd golang)
+plugins=(git git-extras svn sublime osx docker jira mvn autopep8 pep8 pip pylint python fasd)
 
 export PATH=$HOME/.dotfiles/bin:/usr/local/bin:$PATH
 
