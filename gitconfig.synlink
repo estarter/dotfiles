@@ -10,7 +10,7 @@
     status = auto
     branch = auto
 [core]
-	excludesfile = ~/.dotfiles/gitignore
+    excludesfile = ~/.gitignore
     editor = vim
     autocrlf = input
 [apply]
@@ -26,3 +26,7 @@
     path = 
 [push]
 	default = simple
+
+[pull]
+   ff = only
+
