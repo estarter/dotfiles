@@ -18,6 +18,16 @@ What I want from dotfiles:
 
     git clone --recursive https://github.com/estarter/dotfiles.git ~/.dotfiles && ~/.dotfiles/install.sh
 
+## update oh-my-zsh
+
+```bash
+cd oh-my-zsh.symlink
+git checkout master
+git pull
+cd ..
+git commit -am "update oh-my-zsh"
+```
+also check on (oh-my-zsh update instruction)[https://github.com/estarter/oh-my-zsh#update-instruction]
 
 ## components
 
