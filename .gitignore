@@ -1,1 +1,4 @@
+.cache
+*.iml
+.idea
 custom.sh

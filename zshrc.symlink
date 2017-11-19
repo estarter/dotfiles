@@ -88,6 +88,8 @@ plugins=(git git-extras svn sublime osx docker jira mvn autopep8 pep8 pip pylint
 
 export PATH=$HOME/.dotfiles/bin:/usr/local/bin:$PATH
 
+. <(gr completion)
+
 source $ZSH/oh-my-zsh.sh
 WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>'
 
@@ -107,3 +109,4 @@ setopt no_share_history
 if [ -f ~/.dotfiles/custom.sh ]; then
   . ~/.dotfiles/custom.sh
 fi
+
