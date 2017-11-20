@@ -27,7 +27,7 @@ git pull
 cd ..
 git commit -am "update oh-my-zsh"
 ```
-also check on (oh-my-zsh update instruction)[https://github.com/estarter/oh-my-zsh#update-instruction]
+also check on [oh-my-zsh update instruction](https://github.com/estarter/oh-my-zsh#update-instruction)
 
 ## components
 
