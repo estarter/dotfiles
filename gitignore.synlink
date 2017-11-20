@@ -1,3 +1,4 @@
+build-am.sh
 *.iml
 .idea
 ._.DS_Store
