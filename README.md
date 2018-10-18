@@ -16,7 +16,12 @@ What I want from dotfiles:
 
 ## installation 
 
-    git clone --recursive https://github.com/estarter/dotfiles.git ~/.dotfiles && ~/.dotfiles/install.sh
+```bash
+git clone --recursive https://github.com/estarter/dotfiles.git ~/.dotfiles && ~/.dotfiles/install.sh
+```
+
+Another packages:
+1. [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ## update oh-my-zsh
 
