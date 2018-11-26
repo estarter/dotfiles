@@ -87,6 +87,9 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-extras sublime osx docker autopep8 pep8 pip pylint python fasd fzf jhipster ng)
 
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 export PATH=$HOME/.dotfiles/bin:/usr/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
@@ -108,3 +111,5 @@ setopt no_share_history
 if [ -f ~/.dotfiles/custom.sh ]; then
   . ~/.dotfiles/custom.sh
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
